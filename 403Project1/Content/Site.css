@@ -1,6 +1,10 @@
 ﻿body {
     padding-top: 50px;
     padding-bottom: 20px;
+    background-image: url('PortlandTemple.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
 }
 
 /* Set padding to keep content from hitting the edges */
@@ -15,4 +19,3 @@ select,
 textarea {
     max-width: 280px;
 }
-

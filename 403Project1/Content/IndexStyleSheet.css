@@ -1,0 +1,81 @@
+﻿h1 {
+    text-align: center;
+    font-weight: bold;
+    color: black;
+}
+
+.centered {
+    text-align: center;
+    color: black;
+    font-size: 20px;
+}
+
+.quote {
+    text-align: center;
+    color: black;
+    font-size: 16px;
+}
+
+.pMonson {
+    text-align: center;
+    color: black;
+    font-size: 14px;
+}
+
+.buttons {
+    text-align: center;
+    font-size: 24px;
+}
+
+.jumbotron .img {
+    margin-bottom: 0px;
+    opacity: 0.2;
+    color: #fff;
+    background: black url('Img/lds-missionaries.jpg') top center no-repeat;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+jumbotron h2 {
+    margin-top: 0;
+}
+
+.jumbotron {
+    position: relative;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+    .jumbotron .container {
+        position: relative;
+        z-index: 2;
+    }
+
+@media screen and (max-width: 768px) {
+    .jumbotron {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+}
+
+.videoCont {
+    overflow: hidden;
+    padding-bottom: 56.25%;
+    position: relative;
+    height: 0;
+    width: 100%;
+}
+
+.video {
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+    }

@@ -9,6 +9,8 @@ namespace _403Project1.Controllers
 {
     public class HomeController : Controller
     {
+        public static List<Mission> missions = new List<Mission>();
+
 
         public static List<FAQ> faqs = new List<FAQ>();
 
@@ -45,6 +47,36 @@ namespace _403Project1.Controllers
                         Text = "Los Angles California", Value = "2"
                     }
             };
+
+            Mission Portland = new Mission();
+            Portland.mName = "Portland Oregon";
+            Portland.mPresident = "Mikey Jenkins";
+            Portland.mAddress = "123 Sesame St.";
+            Portland.mLanguage = "Spanish";
+            Portland.mClimate = "Rainy";
+            Portland.mReligion = "Protestant";
+            Portland.mFlag = "";
+            missions.Add(Portland);
+
+            Mission Seattle = new Mission();
+            Seattle.mName = "Seattle Washington";
+            Seattle.mPresident = "Peter Madsen";
+            Seattle.mAddress = "555 Ventura St.";
+            Seattle.mLanguage = "Spanish";
+            Seattle.mClimate = "Foggy";
+            Seattle.mReligion = "Protestant";
+            Seattle.mFlag = "";
+            missions.Add(Seattle);
+
+            Mission Los_Angeles = new Mission();
+            Los_Angeles.mName = "Los_Angeles California";
+            Los_Angeles.mPresident = "Jake Saylor";
+            Los_Angeles.mAddress = "555 Wombat Way";
+            Los_Angeles.mLanguage = "Vietnamese";
+            Los_Angeles.mClimate = "Hot";
+            Los_Angeles.mReligion = "Catholic";
+            Los_Angeles.mFlag = "";
+            missions.Add(Los_Angeles);
 
             ViewBag.MissionList = missionList;
             return View();

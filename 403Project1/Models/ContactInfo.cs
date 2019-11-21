@@ -8,6 +8,7 @@ namespace _403Project1.Models
 {
     public class ContactInfo
     {
+        //attributes for contactInfo
         [Display(Name = "First Name")]
         public string user_First_Name { get; set; }
 

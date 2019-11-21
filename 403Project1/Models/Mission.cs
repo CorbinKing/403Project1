@@ -7,6 +7,7 @@ namespace _403Project1.Models
 {
     public class Mission
     {
+        //attributes for mission class
         public string mName { get; set; }
         public string mPresident { get; set; }
         public string mAddress { get; set; }

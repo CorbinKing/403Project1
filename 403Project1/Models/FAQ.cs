@@ -7,6 +7,7 @@ namespace _403Project1.Models
 {
     public class FAQ
     {
+    //Attributes for FAQ class
         public string QuestionPoster { get; set; }
 
         public string Question { get; set; }

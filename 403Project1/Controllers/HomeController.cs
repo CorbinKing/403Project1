@@ -1,4 +1,5 @@
-﻿using System;
+﻿using _403Project1.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -9,11 +10,21 @@ namespace _403Project1.Controllers
     public class HomeController : Controller
     {
 
-    List<string> subjectList = new List<string>();
+        public static List<FAQ> faqs = new List<FAQ>();
+
+        List<string> subjectList = new List<string>();
 
     // GET: Home
     public ActionResult Index()
         {
+            FAQ newFAQ = new FAQ();
+            newFAQ.QuestionPoster = "Future Missionary 1";
+            newFAQ.Question = "How many missionaries are there in this mission?";
+            newFAQ.AnswerPoster = "Previous Missionary 1";
+            newFAQ.Answer = "There are always anywhere from 150 to 200 missionaries in this mission at a time";
+
+            faqs.Add(newFAQ);
+
             return View();
         }
 
@@ -38,6 +49,12 @@ namespace _403Project1.Controllers
             ViewBag.MissionList = missionList;
             return View();
         }
+
+        public ActionResult MissionFAQ()
+        {
+            return View(faqs);
+        }
+
         public ActionResult AboutUs()
         {
             return View();

@@ -3,5 +3,37 @@
     ViewBag.Title = "Missions";
 }
 
-<h2>Missions</h2>
+<head>
+    <link href="~/Content/MissionsStyleSheet.css" rel="stylesheet" />
+</head>
 
+<body>
+
+    <div class="jumbotron">
+        <div class="imgs"></div>
+
+        <h1 class="cont">Mission Maps</h1>
+        
+    </div>
+
+    <div class="container">
+        <table>
+            <tr>
+                <td class="shiftright" style="width: 0px">
+                    Choose A Mission:
+                </td>
+                <td class="shiftrights">
+                    <div>
+                        @using (Html.BeginForm("Mission", "Home", FormMethod.Post, new { enctype = "multipart/form-data" }))
+                        {
+                            @Html.DropDownList("MList", (IEnumerable<SelectListItem>)ViewBag.MissionList)
+                        }
+                    </div>
+                </td>
+            </tr>
+         </table>
+                
+    </div>
+
+
+</body>

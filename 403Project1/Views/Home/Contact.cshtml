@@ -11,57 +11,56 @@
     <br />
 
     <div class="jumbotron">
+        <div class="imgs"></div>
+        
 
+            @using (Html.BeginForm("Contact", "Home", FormMethod.Post, new { enctype = "multipart/form-data" }))
+            {
 
+                <h1>Contact Us</h1>
+                <hr />
+                <table>
+                    <tr>
+                        <td class="cont" , style="width: 0px">
+                            First Name:
+                        </td>
+                        <td>@Html.TextBoxFor(model => model.user_First_Name)</td>
+                    </tr>
+                    <tr>
+                        <td class="cont">
+                            Last Name:
+                        </td>
+                        <td>@Html.TextBoxFor(model => model.user_Last_Name)</td>
+                    </tr>
+                    <tr>
+                        <td class="cont">
+                            Email Address:
+                        </td>
+                        <td>@Html.TextBoxFor(model => model.user_Email)</td>
+                    </tr>
+                    <tr>
+                        <td class="cont">
+                            Email Subject:
+                        </td>
+                        <td>
+                            @Html.DropDownListFor(model => model.user_Subject, (IEnumerable<SelectListItem>)ViewBag.SelectList)
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="cont" , valign="top">
+                            Message:
+                        </td>
+                        <td>@Html.TextAreaFor(model => model.body_Message)</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input class="cont" type="submit" value="Send">
+                        </td>
+                    </tr>
+                </table>
+            }
+        </div>
 
-        @using (Html.BeginForm("Contact", "Home", FormMethod.Post, new { enctype = "multipart/form-data" }))
-        {
-
-            <h1>Contact Us</h1>
-            <hr />
-            <table>
-                <tr>
-                    <td class="cont" , style="width: 0px">
-                        First Name:
-                    </td>
-                    <td>@Html.TextBoxFor(model => model.user_First_Name)</td>
-                </tr>
-                <tr>
-                    <td class="cont">
-                        Last Name:
-                    </td>
-                    <td>@Html.TextBoxFor(model => model.user_Last_Name)</td>
-                </tr>
-                <tr>
-                    <td class="cont">
-                        Email Address:
-                    </td>
-                    <td>@Html.TextBoxFor(model => model.user_Email)</td>
-                </tr>
-                <tr>
-                    <td class="cont">
-                        Email Subject:
-                    </td>
-                    <td>@Html.TextBoxFor(model => model.user_Subject)</td>
-                </tr>
-                <tr>
-                    <td class="cont" , valign="top">
-                        Message:
-                    </td>
-                    <td>@Html.TextAreaFor(model => model.body_Message)</td>
-                </tr>
-                <tr>
-                    <td>
-                        <input class="cont" type="submit" value="Send">
-                    </td>
-                </tr>
-            </table>
-
-
-
-
-        }
-    </div>
 
 </body>
 

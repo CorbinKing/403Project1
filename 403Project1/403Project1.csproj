@@ -101,10 +101,14 @@
     <Content Include="Content\ContactStyleSheet.css" />
     <Content Include="Content\Img\HarryPotter.jpg" />
     <Content Include="Content\Img\lds-missionaries.jpg" />
+    <Content Include="Content\Img\longSky.jpg" />
     <Content Include="Content\Img\PortlandTemple.jpg" />
+    <Content Include="Content\Img\SaltLakeTemple.jpg" />
     <Content Include="Content\Img\Support.jpg" />
     <Content Include="Content\Img\SupportTwo.jpg" />
+    <Content Include="Content\Img\Wood.jpg" />
     <Content Include="Content\IndexStyleSheet.css" />
+    <Content Include="Content\MissionsStyleSheet.css" />
     <Content Include="Content\Site.css" />
     <Content Include="Global.asax" />
     <Content Include="Scripts\bootstrap.bundle.js" />

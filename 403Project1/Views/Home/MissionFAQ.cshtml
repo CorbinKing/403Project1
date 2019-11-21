@@ -1,0 +1,56 @@
+﻿@model IEnumerable<_403Project1.Models.FAQ>
+
+@{
+    ViewBag.Title = "MissionFAQ";
+}
+
+<h2>MissionFAQ</h2>
+
+<p>
+    @Html.ActionLink("Ask a Question", "Create")
+</p>
+<table class="table">
+    <tr>
+        
+        
+        
+        
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Question)
+        </th>
+        <td>
+            @Html.DisplayFor(modelItem => item.QuestionPoster)
+        </td>
+    </tr>
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Question)
+        </td>
+    </tr>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Answer)
+        </th>
+        <td>
+            @Html.DisplayFor(modelItem => item.AnswerPoster)
+        </td>
+    </tr>
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Answer)
+        </td>
+    </tr>
+    <tr>
+        
+        <td> 
+            @Html.TextBoxFor(modelItem => item.Answer, new { @Value = "Give your own answer" })
+        </td>
+    </tr>
+}
+
+</table>

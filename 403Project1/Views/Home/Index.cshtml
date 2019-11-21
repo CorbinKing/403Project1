@@ -2,6 +2,29 @@
 @{
     ViewBag.Title = "Index";
 }
-
-<h2>Index</h2>
-
+<head>
+    <link href="~/Content/IndexStyleSheet.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="jumbotron jumbotron-billboard">
+        <div class="img"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1 class="display-4">Welcome To Missionary Portal</h1>
+                    <p class="lead, centered">Congragulations! You have reached the missionary portal. Please select a link above or "Learn More" link bellow to begin your missionary experience. </p>
+                    <hr class="my-4">
+                    <p class="quote">"Now is the time for members and missionaries to come together, to work together, to labor in the Lords vineyard to bring souls unto him".</p>
+                    <p class="pMonson">-President Thomas S. Monson</p>
+                    <br />
+                    <p class="lead, buttons">
+                        @Html.ActionLink("Learn More", "LearnMore", "Home", null, new { @class = "btn btn-primary btn-large" })
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="videoCont">
+        <iframe class="video" width="1110" height="630" src="https://www.youtube.com/embed/W0-0nniCz6k" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+</body>

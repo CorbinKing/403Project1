@@ -1,7 +1,68 @@
-﻿
+﻿@model _403Project1.Models.ContactInfo
+
 @{
     ViewBag.Title = "Contact";
 }
 
-<h2>Contact</h2>
+<head>
+    <link href="~/Content/ContactStyleSheet.css" rel="stylesheet" />
+</head>
+<body>
+    <br />
+
+    <div class="jumbotron">
+
+
+
+        @using (Html.BeginForm("Contact", "Home", FormMethod.Post, new { enctype = "multipart/form-data" }))
+        {
+
+            <h1>Contact Us</h1>
+            <hr />
+            <table>
+                <tr>
+                    <td class="cont" , style="width: 0px">
+                        First Name:
+                    </td>
+                    <td>@Html.TextBoxFor(model => model.user_First_Name)</td>
+                </tr>
+                <tr>
+                    <td class="cont">
+                        Last Name:
+                    </td>
+                    <td>@Html.TextBoxFor(model => model.user_Last_Name)</td>
+                </tr>
+                <tr>
+                    <td class="cont">
+                        Email Address:
+                    </td>
+                    <td>@Html.TextBoxFor(model => model.user_Email)</td>
+                </tr>
+                <tr>
+                    <td class="cont">
+                        Email Subject:
+                    </td>
+                    <td>@Html.TextBoxFor(model => model.user_Subject)</td>
+                </tr>
+                <tr>
+                    <td class="cont" , valign="top">
+                        Message:
+                    </td>
+                    <td>@Html.TextAreaFor(model => model.body_Message)</td>
+                </tr>
+                <tr>
+                    <td>
+                        <input class="cont" type="submit" value="Send">
+                    </td>
+                </tr>
+            </table>
+
+
+
+
+        }
+    </div>
+
+</body>
+
 

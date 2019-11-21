@@ -1,4 +1,5 @@
-﻿
+﻿@model _403Project1.Models.Mission
+
 @{
     ViewBag.Title = "Missions";
 }
@@ -23,9 +24,13 @@
                 </td>
                 <td class="shiftrights">
                     <div>
-                        @using (Html.BeginForm("Mission", "Home", FormMethod.Post, new { enctype = "multipart/form-data" }))
+                        @using (Html.BeginForm("MissionFAQ", "Home", FormMethod.Post, new { enctype = "multipart/form-data" }))
                         {
-                            @Html.DropDownList("MList", (IEnumerable<SelectListItem>)ViewBag.MissionList)
+                            @Html.DropDownListFor(model => model.mNum, (IEnumerable<SelectListItem>)ViewBag.MissionList)
+
+                            
+
+                            <input type="submit" value="FAQ" class="btn btn-default" />
                         }
                     </div>
                 </td>

@@ -1,0 +1,69 @@
+﻿@model IEnumerable<_403Project1.Models.Mission>
+
+@{
+    ViewBag.Title = "Test2";
+}
+
+<h2>Test2</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.mName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.mPresident)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.mAddress)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.mLanguage)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.mClimate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.mReligion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.mFlag)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.mName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.mPresident)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.mAddress)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.mLanguage)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.mClimate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.mReligion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.mFlag)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+        </td>
+    </tr>
+}
+
+</table>

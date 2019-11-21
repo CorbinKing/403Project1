@@ -5,6 +5,8 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
+/*Peter Madsen, Corbin King, Jake Saylor, Michael Jenkins*/
+
 namespace _403Project1.Controllers
 {
     public class HomeController : Controller
@@ -82,10 +84,40 @@ namespace _403Project1.Controllers
             return View();
         }
 
-        public ActionResult MissionFAQ()
+        [HttpPost]
+        public ActionResult MissionFAQ(Mission myMission)
         {
+            if (myMission.mNum == 0)
+            {
+                ViewBag.mName = "Seattle Washington";
+                ViewBag.mPresident = "Peter Madsen";
+                ViewBag.mAddress = "555 Ventura St.";
+                ViewBag.mLanguage = "Spanish";
+                ViewBag.mClimate = "Foggy";
+                ViewBag.mReligion = "Protestant";
+            }
+            else if (myMission.mNum == 1)
+            {
+                ViewBag.mName = "Seattle Washington";
+                ViewBag.mPresident = "Peter Madsen";
+                ViewBag.mAddress = "555 Ventura St.";
+                ViewBag.mLanguage = "Spanish";
+                ViewBag.mClimate = "Foggy";
+                ViewBag.mReligion = "Protestant";
+            }
+            else
+            {
+                ViewBag.mName = "Los_Angeles California";
+                ViewBag.mPresident = "Jake Saylor";
+                ViewBag.mAddress = "555 Wombat Way";
+                ViewBag.mLanguage = "Vietnamese";
+                ViewBag.mClimate = "Hot";
+                ViewBag.mReligion = "Catholic";
+            }
+
             return View(faqs);
         }
+
 
         public ActionResult AboutUs()
         {
